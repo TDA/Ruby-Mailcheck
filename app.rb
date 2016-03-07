@@ -9,19 +9,20 @@ set :views, "views"
 get '/' do
   return 'Hello world'
 end
+#
+# get '/hello' do
+#   erb :hello
+# end
 
 get '/hello' do
-  erb :hello
-end
-
-post '/hello' do
   greeting = params[:greeting] || "Hi There"
   email = params[:email] || "Nobody"
 
   message = """
 From: Private Person <me@fromdomain.com>
-To: #{email}
 Subject: SMTP e-mail test
+To: #{email}
+
 
 This is a test e-mail message.
 """
@@ -29,7 +30,7 @@ This is a test e-mail message.
   print message
   Net::SMTP.start('localhost', 1025) do |smtp|
     smtp.send_message message, 'me@fromdomain.com',
-                      'test@todomain.com'
+                      'to@asu.com'
   end
 
   erb :index, :locals => {'greeting' => message, 'email' => email}
