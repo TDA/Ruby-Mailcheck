@@ -9,3 +9,6 @@
 * Make sure to construct the http request using curl (if you are ok with command-line),
 or with Postman (Chrome), or HTTPRequester (Firefox), this is to prevent the browsers
 from double encoding the strings you send.
+
+
+* For more info on E-Mail Header Injection, check out my thesis docs: [Thesis on E-Mail Header Injections](https://github.com/TDA/Email-Injection-Docs).
