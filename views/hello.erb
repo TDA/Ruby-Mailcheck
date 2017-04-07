@@ -1,12 +1,24 @@
 <html>
 <head>
   <title>Sample Web Form</title>
+  <style>
+  	form, h1 {
+  		text-align: center;
+  	}
+  	input {
+  		padding: 10px;
+  		margin: 10px;
+  	}
+  	input:first-child {
+  		padding-bottom: 60px;
+  	}
+  </style>
 </head>
 <body>
 
 <h1>Fill Out This Form</h1>
 
-<form action="/hello" method="POST">
+<form action="/hello_mail" method="GET">
   A Greeting: <input type="text" name="greeting">
   <br/>
   Your email: <input type="text" name="email">

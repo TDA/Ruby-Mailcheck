@@ -1,6 +1,7 @@
 require 'net/smtp'
 class Mailcheck
-  puts "Please enter the to: email"
+
+puts "Please enter the to: email"
 inp = gets.chomp
 message = """
 From: Private Person <me@fromdomain.com>

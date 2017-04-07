@@ -10,11 +10,11 @@ get '/' do
   return 'Hello world'
 end
 #
-# get '/hello' do
-#   erb :hello
-# end
-
 get '/hello' do
+  erb :hello
+end
+
+get '/hello_mail' do
   greeting = params[:greeting] || "Hi There"
   email = params[:email] || "Nobody"
 
@@ -25,6 +25,7 @@ To: #{email}
 
 
 This is a test e-mail message.
+#{greeting}
 """
 
   print message
